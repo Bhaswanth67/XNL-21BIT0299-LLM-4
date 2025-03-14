@@ -157,6 +157,7 @@ kubectl apply -f features/k8s_deployment.yaml
 ```
 
 ### Preview
+![FinBOT_UI](FinBOT_UI.png)
 
 
 ## Directory Structure
