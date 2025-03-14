@@ -121,7 +121,7 @@ Users can select from three distinct interaction modes via the sidebar:
 
 With these three modes, FinBOT offers an intuitive and accessible way to analyze financial information dynamically.
 
-[![GitHub Repo](https://img.shields.io/badge/GitHub-FinBOT--Live-blue?logo=github)](https://github.com/Bhaswanth67/finBOT_live)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-FinBOT--Live-blue?logo=github)](https://github.com/Bhaswanth67/finBOT_live)  - https://github.com/Bhaswanth67/finBOT_live
 
 
 ## Fallback Mechanism
