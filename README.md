@@ -162,7 +162,7 @@ kubectl apply -f features/k8s_deployment.yaml
 ## Directory Structure
 
 ```text
-rag/
+FinBOT/
 ├── .streamlit/            # Streamlit settings
 ├── data/                  # Stored chat session metadata
 ├── features/
