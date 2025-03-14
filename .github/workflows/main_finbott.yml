@@ -78,4 +78,7 @@ jobs:
         with:
           app-name: 'finbott'
           slot-name: 'Production'
+          package: .
+          clean: true  # Ensures old files are removed
+
           
