@@ -11,7 +11,7 @@ import base64
 import streamlit as st
 from crewai import Agent, Crew, Process, Task, LLM
 from crewai.tools import BaseTool
-from crewai.tools import SerperDevTool
+from crewai_tools import SerperDevTool
 from typing import Type
 from pydantic import BaseModel, Field
 from qdrant_client import QdrantClient
