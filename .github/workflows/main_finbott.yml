@@ -68,9 +68,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_5FAE437C345040C2B0BBF2E91AF9E3BA }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_E3FECFCA962A4E2F932F3B90B69A479A }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_9FC9B985FF7B4C81B3D8A64BD8A749BA }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_DDD04560C2954E278AA27028E8EBB8F8 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0673B14AF5074ACBAB2CADC243906C19 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C0C83B4914F94147AFD232ED9CC8FF3F }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
@@ -78,7 +78,4 @@ jobs:
         with:
           app-name: 'finbott'
           slot-name: 'Production'
-          package: .
-          clean: true  # Ensures old files are removed
-
           
