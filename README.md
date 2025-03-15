@@ -217,6 +217,58 @@ streamlit run app.py
 
 Access the interface at [http://localhost:8501](http://localhost:8501).
 
+## **Q&A Section**
+
+### 1. Why is the response time sometimes higher?  
+**Answer:** The response time can be higher because FinBOT uses multiple external services:
+
+- **LLM:** Google’s `gemini-2.0-flash-exp` for answering queries.
+- **Embeddings:** `all-MiniLM-L6-v2` from Hugging Face for vectorization.
+- **Vector Database:** Qdrant for storing and retrieving document embeddings.  
+
+Since these services operate on free-tier plans, they may introduce latency due to rate limits, network congestion, or load balancing delays.
+
+---
+
+### 2. Why didn’t you integrate the Chat with Voice mode directly into Streamlit?  
+**Answer:** The **Chat with Voice** mode requires camera access, screen sharing, and real-time voice processing. Streamlit does not natively support these features. Instead, I used an external frontend and backend tech stack to handle these functionalities. Additionally, WebSockets were integrated to enable real-time interactions between the user and FinBOT.
+https://github.com/Bhaswanth67/finBOT_live
+
+---
+
+### 3. Why did you create four separate modes? What is the benefit of this approach?  
+**Answer:**
+
+- Each mode is optimized for specific user needs.
+- **General Queries:** Best for text-based financial questions.
+- **Chat with PDF:** Allows users to interact with financial documents.
+- **Chat with Live Data:** Fetches real-time stock, crypto, and financial news updates.
+- **Chat with Live Voice:** Offers hands-free interaction via voice and camera.  
+
+This modular approach ensures a seamless user experience by selecting the best processing pipeline for each type of query.
+
+---
+
+### 4. You mentioned NewsAPI, Yahoo Finance, and other APIs. How does FinBOT decide which API to call?  
+**Answer:** FinBOT uses a **retriever agent** that analyzes the query type and routes it to the appropriate API:
+
+- If the query is about **stocks or financial markets**, it fetches data from **Yahoo Finance**.
+- If the query relates to **cryptocurrencies**, it uses **CoinGecko**.
+- If the query is about **financial news**, it retrieves data from **NewsAPI**.  
+
+The decision-making is handled through **keyword detection** and **intent classification**.
+
+---
+
+### 5. What is the role of the retrieval and synthesizer agents in FinBOT?  
+**Answer:**
+
+- **Retriever Agent:** Searches relevant data from vector databases (Qdrant) or external APIs. It ensures that responses are contextually accurate by fetching only the most relevant chunks of information.
+- **Synthesizer Agent:** Takes retrieved content and generates a coherent, well-structured response using the LLM. It ensures that the answer is meaningful and readable for the user.  
+
+Together, these agents ensure that FinBOT delivers precise and high-quality financial insights.
+
+
 ## Contributing
 
 1. Fork the repository.
