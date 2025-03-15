@@ -1,5 +1,4 @@
 google-generativeai
-python==3.12
 streamlit
 joblib
 python-dotenv
