@@ -14,3 +14,4 @@ notebook
 black
 pylint
 chromadb[full]
+pysqlite3-binary
