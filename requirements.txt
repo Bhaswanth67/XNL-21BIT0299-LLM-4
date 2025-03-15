@@ -13,3 +13,4 @@ ipython
 notebook
 black
 pylint
+chromadb[full]
