@@ -1,4 +1,7 @@
 import os
+import sys
+import pysqlite3
+sys.modules['sqlite3'] = pysqlite3
 import re
 import numpy as np
 import time
